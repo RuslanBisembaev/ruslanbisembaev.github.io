@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess Battle – Trivia Game</title>
+  <meta name="description" content="Challenge your friends in real-time trivia! Estimate answers, compete live or async, and climb the leaderboard.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f0f14;
+      color: #f0f0f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 680px;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+    }
+
+    .icon svg {
+      width: 60px;
+      height: 60px;
+      fill: white;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #9ca3af;
+      margin-bottom: 40px;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #d1d5db;
+      margin-bottom: 48px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 52px;
+      text-align: left;
+    }
+
+    .feature {
+      background: #1a1a24;
+      border: 1px solid #2d2d3d;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .feature-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #f0f0f5;
+      margin-bottom: 4px;
+    }
+
+    .feature p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+
+    .download-btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .download-btn img {
+      height: 54px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 32px 24px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #8B5CF6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .features { grid-template-columns: 1fr; }
+      .hero { padding: 60px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/>
+      </svg>
+    </div>
+
+    <h1>Guess Battle</h1>
+    <p class="tagline">Trivia &amp; Estimation Game</p>
+
+    <p class="description">
+      Challenge your friends to real-time trivia battles!
+      Estimate numerical answers — the closer you are, the more points you score.
+      Compete live, play async on your own schedule, or battle it out in party mode.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Live Multiplayer</h3>
+        <p>Play simultaneously with 2–4 friends in real-time</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🕐</div>
+        <h3>Async Mode</h3>
+        <p>Challenge friends — they play whenever they're free</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎉</div>
+        <h3>Party Mode</h3>
+        <p>Up to 8 players — how well do you know each other?</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>Monthly rankings among friends and globally</p>
+      </div>
+    </div>
+
+    <a class="download-btn" href="https://apps.apple.com/us/app/guess-battle-trivia-game/id6758636910" target="_blank" rel="noopener">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Ruslan Bisembaev &nbsp;·&nbsp;
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
